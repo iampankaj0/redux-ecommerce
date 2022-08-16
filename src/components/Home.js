@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <div class="card border-0">
-        {/* <img class="card-img" src="./assets/hero-bg.webp" alt="Card image" /> */}
+        <img class="card-img" src="./assets/hero-bg.webp" alt="Card image" />
         {/* <div class="card-img-overlay d-flex flex-column justify-content-center">
         <div className="container">
 

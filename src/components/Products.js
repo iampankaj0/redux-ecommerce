@@ -28,20 +28,26 @@ const Products = () => {
   const Loading = () => {
     return (
       <>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <Skeleton height={350} />
         </div>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <Skeleton height={350} />
         </div>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <Skeleton height={350} />
         </div>
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <Skeleton height={350} />
         </div>
       </>
     );
+  };
+
+  // Filter Data with Category Name
+  const filterProduct = (cat) => {
+    const updatedList = data.filter((x) => x.category === cat);
+    setFilter(updatedList);
   };
 
   const ShowProducts = () => {
@@ -55,13 +61,13 @@ const Products = () => {
             All
           </button>
           <button
-            onClick={() => filterProduct("men")}
+            onClick={() => filterProduct("men's clothing")}
             className="btn btn-outline-dark m-1"
           >
             Men's Clothing
           </button>
           <button
-            onClick={() => filterProduct("women")}
+            onClick={() => filterProduct("women's clothing")}
             className="btn btn-outline-dark m-1"
           >
             Women's Clothing
@@ -81,7 +87,7 @@ const Products = () => {
         </div>
         {filter.map((product) => {
           return (
-            <div className="col-md-3 mb-4" key={product.id}>
+            <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4" key={product.id}>
               <div class="card p-4">
                 <img
                   class="card-img-top"
