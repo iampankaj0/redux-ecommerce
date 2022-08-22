@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
+import { NavLink } from "react-router-dom";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -15,7 +16,7 @@ const Products = () => {
         setData(await response.clone().json());
         setFilter(await response.json());
         setLoading(false);
-        console.log(filter);
+        // console.log(filter);
       }
 
       return () => {
@@ -88,21 +89,21 @@ const Products = () => {
         {filter.map((product) => {
           return (
             <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4" key={product.id}>
-              <div class="card p-4">
+              <div className="card p-4">
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={product.image}
                   alt={product.title}
                   height="250px"
                 />
-                <div class="card-body">
-                  <h5 class="card-title">
+                <div className="card-body">
+                  <h5 className="card-title">
                     {product.title.substring(0, 12)}...
                   </h5>
-                  <p class="card-text lead fw-bold">{product.price}</p>
-                  <a href="#!" class="btn btn-outline-dark">
+                  <p className="card-text lead fw-bold">{product.price}</p>
+                  <NavLink to={`/product/${product.id}`} className="btn btn-outline-dark">
                     Buy Now
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
