@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/redux-ecommerce/static/css/main.a2e89383.css",
-    "main.js": "/redux-ecommerce/static/js/main.75fad7a3.js",
+    "main.css": "/redux-ecommerce/static/css/main.be43b56a.css",
+    "main.js": "/redux-ecommerce/static/js/main.7d9e323e.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/redux-ecommerce/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/sadNotification.gif": "/redux-ecommerce/static/media/sadNotification.3f2633a65308894d9663.gif",
     "static/media/fontawesome-webfont.eot": "/redux-ecommerce/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -10,11 +10,11 @@
     "static/media/hero-bg.webp": "/redux-ecommerce/static/media/hero-bg.92ddd80b25e3db6137c2.webp",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/redux-ecommerce/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/redux-ecommerce/index.html",
-    "main.a2e89383.css.map": "/redux-ecommerce/static/css/main.a2e89383.css.map",
-    "main.75fad7a3.js.map": "/redux-ecommerce/static/js/main.75fad7a3.js.map"
+    "main.be43b56a.css.map": "/redux-ecommerce/static/css/main.be43b56a.css.map",
+    "main.7d9e323e.js.map": "/redux-ecommerce/static/js/main.7d9e323e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2e89383.css",
-    "static/js/main.75fad7a3.js"
+    "static/css/main.be43b56a.css",
+    "static/js/main.7d9e323e.js"
   ]
 }
