@@ -43,20 +43,20 @@ const Navbar = () => {
                   About
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink className="nav-link" to="/contact">
                   Contact
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
             <div className="buttons">
-              <NavLink to="/login" className="btn btn-outline-dark">
+              <NavLink to="/login" className="btn btn-outline-dark mb-2">
                 <i className="fa fa-sign-in mr-1"></i> Login
               </NavLink>
-              <NavLink to="/register" className="btn btn-outline-dark ml-2">
+              <NavLink to="/register" className="btn btn-outline-dark ml-2 mb-2">
                 <i className="fa fa-user-plus mr-1"></i> Register
               </NavLink>
-              <NavLink to="/cart" className="btn btn-outline-dark ml-2">
+              <NavLink to="/cart" className="btn btn-outline-dark ml-2 mb-2">
                 <i className="fa fa-shopping-cart mr-1"></i> Cart ({state.length})
               </NavLink>
             </div>
