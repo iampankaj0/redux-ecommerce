@@ -9,7 +9,7 @@ export const addCart = (product) => {
 // FOR ADD ITEM TO CART
 export const delCart = (product) => {
     return{
-        type: "DELCART",
+        type: "DELITEM",
         payload: product
     }
 }
