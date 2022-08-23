@@ -1,8 +1,10 @@
 import React from "react";
+import { useAlert } from "react-alert";
 // import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { delCart } from "../redux/action";
+import sadNotification from "../assets/sadNotification.gif";
 
 const MainDiv = styled.section`
   background: #f7f7f7;
@@ -54,12 +56,14 @@ const Button = styled.button`
 `;
 
 const Cart = () => {
+  const alert = useAlert();
+
   const cartProducts = useSelector((state) => state.handleCart);
 
   const dispatch = useDispatch();
   const handleRemove = (product) => {
-    alert("Product Removed from Cart");
     dispatch(delCart(product));
+    alert.success("Product Removed from Cart");
   };
 
   const ShowCartProducts = () => {
@@ -86,14 +90,25 @@ const Cart = () => {
     );
   };
 
+  const NoProducts = () => {
+    return (
+      <div>
+        <img
+          className="d-block mx-auto"
+          src={sadNotification}
+          alt="sadNotification"
+        />
+        <h5 className="my-4 text-center">Your Cart is empty</h5>
+      </div>
+    );
+  };
+
   return (
     <MainDiv>
       <div className="container py-4">
         <HeadingTop>cart</HeadingTop>
 
-        {cartProducts.length === 0 && (
-          <h5 className="my-4 text-center">Your Cart is empty</h5>
-        )}
+        {cartProducts.length === 0 && <NoProducts />}
         {cartProducts.length !== 0 && <ShowCartProducts />}
       </div>
     </MainDiv>
